@@ -31,19 +31,31 @@
   -->
 </head>
 
-<body id="top">
+<body id="top" onload="myFunction()" style="margin:0;">
+
+<div id="loader">
+      <div class="center">
+         <div class="ring"></div>
+         <loadinganime>Basketo Games...</loadinganime>
+      </div>
+</div>
+
+
+
+
+
 
   <!-- 
     - #HEADER
   -->
-
+<div style ="display:none;" id="myDiv" class ="animate-bottom">
   <header class="header">
 
     <div class="header-top">
       <div class="container">
 
         <div class="countdown-text">
-          Currently On build! <span class="span skewBg">10</span> Days
+           <span class="span skewBg">Something Is Better than Nothing!</span> 
         </div>
 
         <div class="social-wrapper">
@@ -53,25 +65,25 @@
           <ul class="social-list">
 
             <li>
-              <a href="#" class="social-link">
+              <a href="https://www.facebook.com/profile.php?id=100084341984417" class="social-link">
                 <ion-icon name="logo-facebook"></ion-icon>
               </a>
             </li>
 
             <li>
-              <a href="#" class="social-link">
+              <a href="https://twitter.com/BaslaelWorkineh" class="social-link">
                 <ion-icon name="logo-twitter"></ion-icon>
               </a>
             </li>
 
             <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-pinterest"></ion-icon>
+              <a href="https://www.instagram.com/basuismena/" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
               </a>
             </li>
 
             <li>
-              <a href="#" class="social-link">
+              <a href="https://www.linkedin.com/in/baslael-workineh-ayele-131b11248" class="social-link">
                 <ion-icon name="logo-linkedin"></ion-icon>
               </a>
             </li>
@@ -112,7 +124,7 @@
             </li>
 
             <li class="navbar-item">
-              <a href="#" class="navbar-link skewBg" data-nav-link>Contact</a>
+              <a href="#" class="navbar-link skewBg" data-nav-link>Games</a>
             </li>
 
           </ul>
@@ -199,7 +211,6 @@
           <figure class="hero-banner img-holder" style="--width: 700; --height: 700;">
             <img src="./assets/images/hero-banner.png" width="700" height="700" alt="hero banner" class="w-100">
           </figure>
-
         </div>
       </section>
 
@@ -640,7 +651,7 @@
                   <a href="#" class="card-badge skewBg">Hoodie</a>
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">Men and Women Black Hoodie</a>
+                    <a href="#" class="card-title">Men and Women White Hoodie</a>
                   </h3>
 
                   <div class="card-wrapper">
@@ -929,7 +940,7 @@
               Subscribe <span class="span">For News</span>
             </h2>
 
-            <form action="" class="newsletter-form">
+            <form action="" class="newsletter-form" name="submit-to-google-sheet">
 
               <div class="input-wrapper skewBg">
                 <input type="email" name="email_address" aria-label="email" placeholder="Enter your email..." required
@@ -945,7 +956,7 @@
               </button>
 
             </form>
-
+            <thank id="msg"></thank>
           </div>
 
         </div>
@@ -1014,7 +1025,7 @@
           </li>
 
           <li>
-            <a href="#" class="footer-link">Game Design</a>
+            <a href="#" class="footer-link">Game Development</a>
           </li>
 
           <li>
@@ -1026,11 +1037,11 @@
           </li>
 
           <li>
-            <a href="#" class="footer-link">Communication</a>
+            <a href="#" class="footer-link">Web Development</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Business</a>
+            <a href="#" class="footer-link">Communication</a>
           </li>
 
         </ul>
@@ -1072,25 +1083,25 @@
             <ul class="social-list">
 
               <li>
-                <a href="#" class="social-link" style="background-color: #3b5998">
+                <a href="https://www.facebook.com/profile.php?id=100084341984417" class="social-link" style="background-color: #3b5998">
                   <ion-icon name="logo-facebook"></ion-icon>
                 </a>
               </li>
 
               <li>
-                <a href="#" class="social-link" style="background-color: #55acee">
+                <a href="https://twitter.com/BaslaelWorkineh" class="social-link" style="background-color: #55acee">
                   <ion-icon name="logo-twitter"></ion-icon>
                 </a>
               </li>
 
               <li>
-                <a href="#" class="social-link" style="background-color: #d71e18">
-                  <ion-icon name="logo-pinterest"></ion-icon>
+                <a href="https://www.instagram.com/basuismena/" class="social-link" style="background-color: #d71e18">
+                  <ion-icon name="logo-instagram"></ion-icon>
                 </a>
               </li>
 
               <li>
-                <a href="#" class="social-link" style="background-color: #1565c0">
+                <a href="https://www.linkedin.com/in/baslael-workineh-ayele-131b11248" class="social-link" style="background-color: #1565c0">
                   <ion-icon name="logo-linkedin"></ion-icon>
                 </a>
               </li>
@@ -1103,7 +1114,7 @@
 
             <p class="footer-list-title">Sign Up for Notifications</p>
 
-            <form action="" class="footer-newsletter">
+            <form action="" class="footer-newsletter" name="submit-to-google-sheet">
               <input type="email" name="email_address" aria-label="email" placeholder="Enter your email" required
                 class="email-field">
 
@@ -1111,7 +1122,7 @@
                 <ion-icon name="rocket"></ion-icon>
               </button>
             </form>
-
+            <thank id="msg"></thank>
           </div>
 
         </div>
@@ -1161,6 +1172,36 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-</body>
+</div>
+<script>
+var myVar;
 
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxeLciXm1PDp6s1OQykW46XNBkS4gvYqMQMwWF2vO2K9g9dxLDBMKVBniqoEkkDz6vH/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+	      msg.innerHTML = "Thank You For Subscribing!"
+	  })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+ 
+</body>
 </html>
