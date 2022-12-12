@@ -104,6 +104,7 @@
 
 
 
+
 /*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
@@ -1445,6 +1446,7 @@ body {
     color: var(--marigold);
     font-size: var(--fs-9);
     padding: 8px 10px;
+
   }
 
   .header-bottom { outline: 1px solid hsla(0, 0%, 0%, 0.2); }
@@ -1692,3 +1694,90 @@ body {
   .footer .container { grid-template-columns: 1fr 0.7fr 0.7fr 1fr; }
 
 }
+
+
+#loader {
+ margin: 0;
+  padding: 0;
+  font-family: montserrat;
+  background: black;
+}
+.center{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.ring{
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  animation: ring 2s linear infinite;
+}
+
+@keyframes ring {
+  0%{
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px #e65c00;
+  }
+  50%{
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 2px #18b201;
+  }
+  100%{
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px #0456c8;
+  }
+}
+
+.ring:before{
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(255,255,255,.3);
+}
+loadinganime{
+  color: #737373;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 200px;
+  animation: text 3s ease-in-out infinite;
+}
+@keyframes text {
+  50%{
+    color: black;
+  }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+
+
+
+thank{
+color: #61b752;
+margin-top: 10px;
+display: block;
+}
+
+
